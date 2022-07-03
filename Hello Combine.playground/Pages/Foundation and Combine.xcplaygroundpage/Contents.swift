@@ -8,7 +8,11 @@ import UIKit
 
 // URLSessionTask Publisher and JSON Decoding Operator
 
-
+URLSession.shared.dataTaskPublisher(for: URL(string: "www.google.com")!)
+    .map { data, response in
+        return data
+    }
+    .decode(type: <#T##Decodable.Protocol#>, decoder: <#T##TopLevelDecoder#>)
 
 
 // Notifications
